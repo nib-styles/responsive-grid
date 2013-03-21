@@ -1,0 +1,95 @@
+/**
+ * Responsive grid classes
+ */
+
+.r-grid{
+    letter-spacing: -0.31em;
+    list-style:none; 
+    margin:0;
+    padding:0;
+
+    .r-grid__unit{
+        @include border-box;
+        display:inline-block;
+        letter-spacing: normal;
+        text-align: left;
+        text-rendering: auto;
+        vertical-align: top;
+        word-spacing: normal;
+    }
+
+    &.r-grid--full{
+     margin-left:0;
+
+        > .r-grid__unit{
+            padding-left:0;
+        }
+    }
+}
+
+/**
+ * Responsive grid containers defining a grid width
+ */
+.r-grid-container {
+    margin: 0 auto;
+    max-width: 960px;
+}
+
+/**
+ * Grid units named by device
+ */
+
+@mixin device($device:""){
+
+    // Append device name to the <html> psuedo element
+    // to use with 'breakpoints' js component
+    html:before {
+        content: $device;
+        display: none;
+    }
+
+    // If the device name isnt null, prepend a dash
+    @if ($device != ""){
+        $device: -#{$device};
+    }
+
+    $breakpoints: 2, 3, 4, 12, 16, 24;
+
+    .unit#{$device}-full{
+        width:100%;
+    }
+
+    .unit#{$device}-half{
+        width:50%;
+    }
+
+    @each $n in $breakpoints {
+        @for $i from 1 through $n {
+            @if $i != $n {
+                .unit#{$device}-#{$i}of#{$n} { 
+                    width: percentage($i / $n);
+                }
+            }
+        }
+    }
+}
+
+/**
+ * media queries that assign breakpoint to grid units
+ */
+
+@media (min-width: 801px){
+    @include device();
+}
+@media (max-width: 800px){
+    @include device("800");
+}
+@media (max-width: 640px){
+    @include device("640");
+}
+@media (max-width: 480px){
+    @include device("480");
+}
+@media (max-width: 320px){
+    @include device("320");
+}
