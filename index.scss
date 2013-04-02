@@ -78,18 +78,60 @@
  * media queries that assign breakpoint to grid units
  */
 
+.only-960,
+.only-800,
+.only-640,
+.only-480,
+.only-320 {
+    display: none;
+}
+
+@media (min-width: 959px){
+    .only-960 {
+        display: block;
+    }
+    .not-960 {
+        display: none;
+    }
+}
+
 @media (min-width: 801px){
     @include device();
 }
+
 @media (max-width: 800px){
     @include device("800");
+    .only-800 {
+        display: block;
+    }
+    .not-800 {
+        display: none;
+    }
 }
 @media (max-width: 640px){
     @include device("640");
+    .only-650 {
+        display: block;
+    }
+    .not-650 {
+        display: none;
+    }
 }
 @media (max-width: 480px){
     @include device("480");
+    .only-480 {
+        display: block;
+    }
+    .not-480 {
+        display: none;
+    }
 }
 @media (max-width: 320px){
     @include device("320");
+    .only-320 {
+        display: block;
+    }
+    .not-320 {
+        display: none;
+    }
 }
