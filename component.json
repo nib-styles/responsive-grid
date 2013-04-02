@@ -1,7 +1,7 @@
 {
   "name": "responsive-grid",
   "main": "index.scss",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "dependencies": {},
-  "files": ["index.scss", "demo/index.html"]
+  "files": ["index.scss"]
 }

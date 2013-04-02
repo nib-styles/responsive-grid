@@ -110,10 +110,10 @@
 }
 @media (max-width: 640px){
     @include device("640");
-    .only-650 {
+    .only-640 {
         display: block;
     }
-    .not-650 {
+    .not-640 {
         display: none;
     }
 }
