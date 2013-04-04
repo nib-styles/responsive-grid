@@ -12,7 +12,6 @@
         @include border-box;
         display:inline-block;
         letter-spacing: normal;
-        text-align: left;
         text-rendering: auto;
         vertical-align: top;
         word-spacing: normal;
@@ -33,6 +32,10 @@
 .r-grid-container {
     margin: 0 auto;
     max-width: 960px;
+
+    &.r-grid-container--940 {
+        max-width: 940px;
+    }
 }
 
 /**
@@ -86,6 +89,9 @@
     display: none;
 }
 
+// Default units - always available
+@include device();
+
 @media (min-width: 959px){
     .only-960 {
         display: block;
@@ -93,10 +99,6 @@
     .not-960 {
         display: none;
     }
-}
-
-@media (min-width: 801px){
-    @include device();
 }
 
 @media (max-width: 800px){
