@@ -1,3 +1,5 @@
+$grid-breakpoints: 320 480 640 800 960;
+
 /**
  * Responsive grid classes
  */
@@ -103,7 +105,7 @@
 
 @media (min-width: 959px){
     .only-960 {
-        display: block;
+        display: block !important;
     }
     .not-960 {
         display: none !important;
@@ -116,7 +118,7 @@
 @media (max-width: 800px){
     @include device("800");
     .only-800 {
-        display: block;
+        display: block !important;
     }
     .not-800 {
         display: none !important;
@@ -125,7 +127,7 @@
 @media (max-width: 640px){
     @include device("640");
     .only-640 {
-        display: block;
+        display: block !important;
     }
     .not-640 {
         display: none !important;
@@ -134,7 +136,7 @@
 @media (max-width: 480px){
     @include device("480");
     .only-480 {
-        display: block;
+        display: block !important;
     }
     .not-480 {
         display: none !important;
@@ -143,22 +145,9 @@
 @media (max-width: 320px){
     @include device("320");
     .only-320 {
-        display: block;
+        display: block !important;
     }
     .not-320 {
         display: none !important;
     }
-}
-
-@mixin hide-at-breakpoint($name) {
-  @media (max-width: #{$name}) {
-    display: none;
-  }
-}
-
-@mixin show-at-breakpoint($name) {
-  display: none;
-  @media (max-width: #{$name}) {
-    display: inherit;
-  }
 }
