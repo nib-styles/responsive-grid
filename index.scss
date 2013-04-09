@@ -149,3 +149,16 @@
         display: none !important;
     }
 }
+
+@mixin hide-at-breakpoint($name) {
+  @media (max-width: #{$name}) {
+    display: none;
+  }
+}
+
+@mixin show-at-breakpoint($name) {
+  display: none;
+  @media (max-width: #{$name}) {
+    display: inherit;
+  }
+}
