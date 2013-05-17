@@ -103,7 +103,7 @@ $grid-breakpoints: 320 480 640 800 960;
     display: none !important;
 }
 
-@media (min-width: 959px){
+@media (min-width: 959px) and (min-device-width: 959px) {
     .only-960 {
         display: block !important;
     }
@@ -115,7 +115,7 @@ $grid-breakpoints: 320 480 640 800 960;
 // Default units - always available
 @include device();
 
-@media (max-width: 800px){
+@media (max-width: 800px) and (min-device-width: 800px) {
     @include device("800");
     .only-800 {
         display: block !important;
@@ -124,7 +124,7 @@ $grid-breakpoints: 320 480 640 800 960;
         display: none !important;
     }
 }
-@media (max-width: 640px){
+@media (max-width: 640px) and (min-device-width: 640px) {
     @include device("640");
     .only-640 {
         display: block !important;
@@ -133,7 +133,7 @@ $grid-breakpoints: 320 480 640 800 960;
         display: none !important;
     }
 }
-@media (max-width: 480px){
+@media (max-width: 480px) and (min-device-width: 480px) {
     @include device("480");
     .only-480 {
         display: block !important;
@@ -142,7 +142,7 @@ $grid-breakpoints: 320 480 640 800 960;
         display: none !important;
     }
 }
-@media (max-width: 320px){
+@media (max-width: 320px) and (min-device-width: 320px) {
     @include device("320");
     .only-320 {
         display: block !important;
