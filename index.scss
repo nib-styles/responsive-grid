@@ -6,7 +6,7 @@ $grid-breakpoints: 320 480 640 800 960;
 
 .r-grid{
     letter-spacing: -0.31em;
-    list-style:none; 
+    list-style:none;
     margin:0;
     padding:0;
 
@@ -83,7 +83,7 @@ $grid-breakpoints: 320 480 640 800 960;
     @each $n in $breakpoints {
         @for $i from 1 through $n {
             @if $i != $n {
-                .unit#{$device}-#{$i}of#{$n} { 
+                .unit#{$device}-#{$i}of#{$n} {
                     width: percentage($i / $n);
                 }
             }
@@ -110,6 +110,10 @@ $grid-breakpoints: 320 480 640 800 960;
     .not-960 {
         display: none !important;
     }
+}
+
+.no-mediaqueries .not-960 {
+    display :none !important;
 }
 
 // Default units - always available
