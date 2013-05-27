@@ -113,7 +113,11 @@ $grid-breakpoints: 320 480 640 800 960;
 }
 
 .no-mediaqueries .not-960 {
-    display :none !important;
+    display: none !important;
+}
+
+.no-mediaqueries .only-960 {
+    display: block !important;
 }
 
 // Default units - always available
