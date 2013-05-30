@@ -103,15 +103,6 @@ $grid-breakpoints: 320 480 640 800 960;
     display: none !important;
 }
 
-@media (min-width: 959px), (max-device-width: 959px) {
-    .only-960 {
-        display: block !important;
-    }
-    .not-960 {
-        display: none !important;
-    }
-}
-
 .no-mediaqueries .not-960 {
     display: none !important;
 }
@@ -120,9 +111,26 @@ $grid-breakpoints: 320 480 640 800 960;
     display: block !important;
 }
 
-// Default units - always available
+/*
+ * Minimum desktop
+ */
+@media (min-width: 959px) {
+    .only-960 {
+        display: block !important;
+    }
+    .not-960 {
+        display: none !important;
+    }
+}
+
+/*
+ * Default units
+ */
 @include device();
 
+/*
+ * Tablet
+ */
 @media (max-width: 800px), (max-device-width: 800px) {
     @include device("800");
     .only-800 {
@@ -132,6 +140,10 @@ $grid-breakpoints: 320 480 640 800 960;
         display: none !important;
     }
 }
+
+/*
+ * Portrait Tablet
+ */
 @media (max-width: 640px), (max-device-width: 640px) {
     @include device("640");
     .only-640 {
@@ -141,6 +153,10 @@ $grid-breakpoints: 320 480 640 800 960;
         display: none !important;
     }
 }
+
+/*
+ * Landscape Smartphone
+ */
 @media (max-width: 480px), (max-device-width: 480px) {
     @include device("480");
     .only-480 {
@@ -150,6 +166,10 @@ $grid-breakpoints: 320 480 640 800 960;
         display: none !important;
     }
 }
+
+/*
+ * Portrait Smartphone
+ */
 @media (max-width: 320px), (max-device-width: 320px) {
     @include device("320");
     .only-320 {
