@@ -144,7 +144,7 @@ $grid-breakpoints: 320 480 640 800 960;
 /*
  * Portrait Tablet
  */
-@media (max-width: 640px), (max-device-width: 640px) {
+@media (max-width: 640px) {
     @include device("640");
     .only-640 {
         display: block !important;
@@ -157,7 +157,7 @@ $grid-breakpoints: 320 480 640 800 960;
 /*
  * Landscape Smartphone
  */
-@media (max-width: 480px), (max-device-width: 480px) {
+@media (max-width: 480px) {
     @include device("480");
     .only-480 {
         display: block !important;
@@ -170,7 +170,7 @@ $grid-breakpoints: 320 480 640 800 960;
 /*
  * Portrait Smartphone
  */
-@media (max-width: 320px), (max-device-width: 320px) {
+@media (max-width: 320px) {
     @include device("320");
     .only-320 {
         display: block !important;
