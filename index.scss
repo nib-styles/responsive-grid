@@ -131,7 +131,7 @@ $grid-breakpoints: 320 480 640 800 960;
 /*
  * Tablet
  */
-@media (max-width: 800px), (max-device-width: 800px) {
+@media (max-width: 800px) {
     @include device("800");
     .only-800 {
         display: block !important;
