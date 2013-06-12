@@ -1,0 +1,61 @@
+/**
+ * Container for the grid
+ */
+.rg-Page {
+  max-width: $rg-width / $rg-font-size + rem;
+  .no-mediaqueries & {
+    width: $rg-width;
+  }
+}
+
+.rg-Page--center {
+  margin: 0 auto;
+}
+
+/**
+ * Grid Unit Container
+ */
+.rg-Grid {
+  letter-spacing: -0.31em;
+  text-rendering: optimizespeed;
+  margin:0;
+  padding:0;
+}
+
+.rg-Grid--center {
+  text-align: center;
+}
+
+/**
+ * Represents a single column
+ */
+.rg-Unit {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  display: inline-block;
+  letter-spacing: normal;
+  text-align: left;
+  text-rendering: auto;
+  vertical-align: top;
+  word-spacing: normal;
+  width: 100%;
+}
+
+.rg-Unit--center {
+  margin: 0 auto;
+  display: block;
+}
+
+/**
+ * Base settings. The column widths
+ * will be based in the font-size using rems
+ */
+html {
+  font-size: $rg-font-size;
+}
+
+// Append device name to the <html> psuedo element
+// to use with 'breakpoints' js component
+html:before {
+  display: none;
+}

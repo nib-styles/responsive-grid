@@ -1,182 +1,78 @@
-$grid-breakpoints: 320 480 640 800 960;
+$rg-width: 960px;
+$rg-font-size: 16px;
+$rg-spacing: 0 5px 10px 20px 40px 60px;
 
-/**
- * Responsive grid classes
- */
+// Components
+// -----------------------------------------------------------------
 
-.r-grid{
-    letter-spacing: -0.31em;
-    text-rendering: optimizespeed;
-    list-style:none;
-    margin:0;
-    padding:0;
+@import "nib-styles-fractional-widths/index";
+@import "nib-styles-spacing-classes/index";
 
-    .r-grid__unit{
-        @include border-box;
-        display:inline-block;
-        letter-spacing: normal;
-        text-rendering: auto;
-        vertical-align: top;
-        word-spacing: normal;
-    }
+// Grid Framework
+// -----------------------------------------------------------------
 
-    .r-grid__media {
-        max-width: 100%;
-    }
+@import "./lib/base";
 
-    &.r-grid--full{
-     margin-left:0;
+// Mixins
+// -----------------------------------------------------------------
 
-        > .r-grid__unit{
-            padding-left:0;
-        }
-    }
-}
-
-/**
- * Responsive grid containers defining a grid width
- */
-.r-grid-container {
-    margin: 0 auto;
-    max-width: 960px;
-
-    &.r-grid-container--940 {
-        max-width: 940px;
-    }
-}
-
-/**
- * Grid units named by device
- */
-
-@mixin device($device:""){
-
-    // Append device name to the <html> psuedo element
-    // to use with 'breakpoints' js component
-    html:before {
-        content: $device;
+@mixin rg-VisibilityClasses($columns, $breakpoints) {
+  @each $breakpoint in $breakpoints {
+    @if $breakpoint != $columns {
+      .rg-visibleAt#{$breakpoint} {
         display: none;
+      }
     }
-
-    // If the device name isnt null, prepend a dash
-    @if ($device != ""){
-        $device: -#{$device};
-    }
-
-    $breakpoints: 2, 3, 4, 12, 16, 24;
-
-    .unit#{$device}-full{
-        width:100%;
-    }
-
-    .unit#{$device}-half{
-        width:50%;
-    }
-
-    .unit#{$device}-remove-pad {
-        padding: 0 !important;
-    }
-
-    .unit#{$device}-remove-inset {
-        margin: 0 !important;
-    }
-
-    @each $n in $breakpoints {
-        @for $i from 1 through $n {
-            @if $i != $n {
-                .unit#{$device}-#{$i}of#{$n} {
-                    width: percentage($i / $n);
-                }
-            }
-        }
-    }
+  }
+  .rg-invisibleAt#{$columns} {
+    display: none;
+  }
 }
 
-/**
- * media queries that assign breakpoint to grid units
- */
-
-.only-960,
-.only-800,
-.only-640,
-.only-480,
-.only-320 {
-    display: none !important;
+@mixin rg-Classes($columns) {
+  html:before {
+    content: "#{$columns}";
+  }
+  @include rg-VisibilityClasses($columns, 4 6 8 10 12);
+  @include FractionalWidths($columns, $prefix: 'rg-');
+  @include Spacing($rg-spacing, $prefix: 'rg-', $suffix: "at#{$columns}");
 }
 
-.no-mediaqueries .not-960 {
-    display: none !important;
+// Breakpoints
+// -----------------------------------------------------------------
+
+// 320px
+@media (min-width: 1rem) {
+  @include rg-Classes(4);
 }
 
-.no-mediaqueries .only-960 {
-    display: block !important;
+// 480px
+@media (min-width: 30rem) {
+  @include rg-Classes(6);
 }
 
-/*
- * Minimum desktop
- */
-@media (min-width: 959px) {
-    .only-960 {
-        display: block !important;
-    }
-    .not-960 {
-        display: none !important;
-    }
+// 640px
+@media (min-width: 40rem) {
+  @include rg-Classes(8);
 }
 
-/*
- * Default units
- */
-@include device();
-
-/*
- * Tablet
- */
-@media (max-width: 800px) {
-    @include device("800");
-    .only-800 {
-        display: block !important;
-    }
-    .not-800 {
-        display: none !important;
-    }
+// 800px
+@media (min-width: 50rem) {
+  @include rg-Classes(10);
 }
 
-/*
- * Portrait Tablet
- */
-@media (max-width: 640px) {
-    @include device("640");
-    .only-640 {
-        display: block !important;
-    }
-    .not-640 {
-        display: none !important;
-    }
+// 960px
+@media (min-width: 60rem) {
+  @include rg-Classes(12);
 }
 
-/*
- * Landscape Smartphone
- */
-@media (max-width: 480px) {
-    @include device("480");
-    .only-480 {
-        display: block !important;
-    }
-    .not-480 {
-        display: none !important;
-    }
-}
+// Fallback
+// -----------------------------------------------------------------
 
-/*
- * Portrait Smartphone
- */
-@media (max-width: 320px) {
-    @include device("320");
-    .only-320 {
-        display: block !important;
-    }
-    .not-320 {
-        display: none !important;
-    }
+.no-mediaqueries,
+.no-js {
+  &:before {
+    content: "12";
+  }
+  @include rg-Classes(12);
 }
