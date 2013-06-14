@@ -16,16 +16,18 @@ $rg-spacing: 0 5px 10px 20px 40px 60px;
 // Mixins
 // -----------------------------------------------------------------
 
-@mixin rg-VisibilityClasses($columns, $breakpoints) {
-  @each $breakpoint in $breakpoints {
-    @if $breakpoint != $columns {
-      .rg-visibleAt#{$breakpoint} {
-        display: none;
-      }
-    }
-  }
+@mixin rg-VisibilityClasses($columns) {
   .rg-invisibleAt#{$columns} {
-    display: none;
+    display: none !important;
+  }
+  .rg-visibleAt#{$columns} {
+    display: block !important;
+  }
+  .rg-inlineBlockAt#{$columns} {
+    display: inline-block !important;
+  }
+  .rg-inlineAt#{$columns} {
+    display: inline !important;
   }
 }
 
@@ -33,7 +35,7 @@ $rg-spacing: 0 5px 10px 20px 40px 60px;
   html:before {
     content: "#{$columns}";
   }
-  @include rg-VisibilityClasses($columns, 4 6 8 10 12);
+  @include rg-VisibilityClasses($columns);
   @include FractionalWidths($columns, $prefix: 'rg-');
   @include Spacing($rg-spacing, $prefix: 'rg-', $suffix: "at#{$columns}");
 }
@@ -42,27 +44,27 @@ $rg-spacing: 0 5px 10px 20px 40px 60px;
 // -----------------------------------------------------------------
 
 // 320px
-@media (min-width: 1rem) {
+@media (min-width: 1em) {
   @include rg-Classes(4);
 }
 
 // 480px
-@media (min-width: 30rem) {
+@media (min-width: 30em) {
   @include rg-Classes(6);
 }
 
 // 640px
-@media (min-width: 40rem) {
+@media (min-width: 40em) {
   @include rg-Classes(8);
 }
 
 // 800px
-@media (min-width: 50rem) {
+@media (min-width: 50em) {
   @include rg-Classes(10);
 }
 
 // 960px
-@media (min-width: 60rem) {
+@media (min-width: 60em) {
   @include rg-Classes(12);
 }
 
