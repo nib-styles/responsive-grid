@@ -2,14 +2,11 @@
  * Container for the grid
  */
 .rg-Page {
+  margin: 0 auto;
   max-width: $rg-width / $rg-font-size + rem;
   .no-mediaqueries & {
     width: $rg-width;
   }
-}
-
-.rg-Page--center {
-  margin: 0 auto;
 }
 
 /**
