@@ -4,7 +4,7 @@
   "version": "0.2.2",
   "dependencies": {
     "nib-styles/fractional-widths": "0.0.1",
-    "nib-styles/spacing-classes": "0.0.1"
+    "nib-styles/spacing-classes": "0.1.0"
   } ,
   "files": [
     "index.scss",
