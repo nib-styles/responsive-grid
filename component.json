@@ -1,7 +1,7 @@
 {
   "name": "responsive-grid",
   "main": "index.scss",
-  "version": "0.2.3",
+  "version": "0.2.5",
   "dependencies": {
     "nib-styles/fractional-widths": "0.0.1",
     "nib-styles/spacing-classes": "0.1.0"
