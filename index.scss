@@ -17,10 +17,12 @@ $rg-spacing: 0 5px 10px 20px 40px 60px;
 // -----------------------------------------------------------------
 
 @mixin rg-VisibilityClasses($columns) {
-  .rg-invisibleAt#{$columns} {
+  .rg-invisibleAt#{$columns},
+  .rg-hiddenAt#{$columns} {
     display: none !important;
   }
-  .rg-visibleAt#{$columns} {
+  .rg-visibleAt#{$columns},
+  .rg-blockAt#{$columns} {
     display: block !important;
   }
   .rg-inlineBlockAt#{$columns} {
@@ -28,6 +30,12 @@ $rg-spacing: 0 5px 10px 20px 40px 60px;
   }
   .rg-inlineAt#{$columns} {
     display: inline !important;
+  }
+  .rg-textCenterAt#{$columns} {
+    text-align: center;
+  }
+  .rg-textLeftAt#{$columns} {
+    text-align: left;
   }
 }
 
