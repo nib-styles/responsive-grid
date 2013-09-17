@@ -1,4 +1,2 @@
-build:
-	@sass index.scss > build/build.css --load-path components
-
-.PHONY: build
+build: index.scss lib components
+	@sass index.scss > index.css --load-path components
