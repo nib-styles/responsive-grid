@@ -9,14 +9,6 @@ We use a responsive grid component to build all of the layouts on the site. This
 component install nib-styles/responsive-grid
 ```
 
-## Development
-
-To build the CSS file used in the component
-
-```
-component install --dev && make build
-```
-
 ## Usage
 
 The grid is made up of these parts:
@@ -186,3 +178,11 @@ You can replace the `p` in all these examples to use margin instead of padding.
 As with the sizing classes, these are mobile first, so you don't need to apply spacing at every breakpoint, just at the lowest point. 
 
 For example, if you wanted 20px padding on all sides at every breakpoint, just apply it at 4 columns: `rg-p4at4`. This will affect every breakpoint above it.
+
+## Development & Testing
+
+If you want to work on this project, don't edit the CSS file directly. Edit the Sass files and rebuild the CSS file. To build it you can run this:
+
+```
+component install --dev && make build
+```
