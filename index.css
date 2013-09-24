@@ -1682,9 +1682,6 @@ html:before {
   .rg-mx6at12 {
     margin-right: 60px;
     margin-left: 60px; } }
-.no-mediaqueries:before,
-.no-js:before {
-  content: "12"; }
 .no-mediaqueries html:before,
 .no-js html:before {
   content: "4"; }
