@@ -85,9 +85,6 @@ $rg-spacing: 0 5px 10px 20px 40px 60px;
 
 .no-mediaqueries,
 .no-js {
-  &:before {
-    content: "12";
-  }
   @include rg-Classes(4);
   @include rg-Classes(6);
   @include rg-Classes(8);
