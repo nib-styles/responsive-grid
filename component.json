@@ -1,9 +1,9 @@
 {
   "name": "responsive-grid",
-  "version": "0.3.1",
+  "version": "0.4.0",
   "development": {
     "nib-styles/fractional-widths": "0.0.1",
-    "nib-styles/spacing-classes": "0.1.0"
+    "nib-styles/spacing-classes": "c5bbd8fb79de3e5c86a260cb11692289e06343fb"
   },
   "styles": [
     "index.css"
