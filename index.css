@@ -75,6 +75,9 @@ html:before {
   .rg-textLeftAt4 {
     text-align: left; }
 
+  .rg-textRightAt4 {
+    text-align: right; }
+
   .rg-1of4 {
     width: 25%; }
 
@@ -389,6 +392,9 @@ html:before {
 
   .rg-textLeftAt6 {
     text-align: left; }
+
+  .rg-textRightAt6 {
+    text-align: right; }
 
   .rg-1of6 {
     width: 16.66667%; }
@@ -710,6 +716,9 @@ html:before {
 
   .rg-textLeftAt8 {
     text-align: left; }
+
+  .rg-textRightAt8 {
+    text-align: right; }
 
   .rg-1of8 {
     width: 12.5%; }
@@ -1037,6 +1046,9 @@ html:before {
 
   .rg-textLeftAt10 {
     text-align: left; }
+
+  .rg-textRightAt10 {
+    text-align: right; }
 
   .rg-1of10 {
     width: 10%; }
@@ -1370,6 +1382,9 @@ html:before {
 
   .rg-textLeftAt12 {
     text-align: left; }
+
+  .rg-textRightAt12 {
+    text-align: right; }
 
   .rg-1of12 {
     width: 8.33333%; }
@@ -1711,6 +1726,9 @@ html:before {
 .no-mediaqueries .rg-textLeftAt4,
 .no-js .rg-textLeftAt4 {
   text-align: left; }
+.no-mediaqueries .rg-textRightAt4,
+.no-js .rg-textRightAt4 {
+  text-align: right; }
 .no-mediaqueries .rg-1of4,
 .no-js .rg-1of4 {
   width: 25%; }
@@ -2028,6 +2046,9 @@ html:before {
 .no-mediaqueries .rg-textLeftAt6,
 .no-js .rg-textLeftAt6 {
   text-align: left; }
+.no-mediaqueries .rg-textRightAt6,
+.no-js .rg-textRightAt6 {
+  text-align: right; }
 .no-mediaqueries .rg-1of6,
 .no-js .rg-1of6 {
   width: 16.66667%; }
@@ -2351,6 +2372,9 @@ html:before {
 .no-mediaqueries .rg-textLeftAt8,
 .no-js .rg-textLeftAt8 {
   text-align: left; }
+.no-mediaqueries .rg-textRightAt8,
+.no-js .rg-textRightAt8 {
+  text-align: right; }
 .no-mediaqueries .rg-1of8,
 .no-js .rg-1of8 {
   width: 12.5%; }
@@ -2680,6 +2704,9 @@ html:before {
 .no-mediaqueries .rg-textLeftAt10,
 .no-js .rg-textLeftAt10 {
   text-align: left; }
+.no-mediaqueries .rg-textRightAt10,
+.no-js .rg-textRightAt10 {
+  text-align: right; }
 .no-mediaqueries .rg-1of10,
 .no-js .rg-1of10 {
   width: 10%; }
@@ -3015,6 +3042,9 @@ html:before {
 .no-mediaqueries .rg-textLeftAt12,
 .no-js .rg-textLeftAt12 {
   text-align: left; }
+.no-mediaqueries .rg-textRightAt12,
+.no-js .rg-textRightAt12 {
+  text-align: right; }
 .no-mediaqueries .rg-1of12,
 .no-js .rg-1of12 {
   width: 8.33333%; }
