@@ -5,7 +5,8 @@
     "nib-styles/fractional-widths": "0.0.1",
     "nib-styles/spacing-classes": "c5bbd8fb79de3e5c86a260cb11692289e06343fb"
   },
-  "styles": [
-    "index.scss"
+  "files": [
+    "index.scss",
+    "lib/_base.scss"
   ]
 }
