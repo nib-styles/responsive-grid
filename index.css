@@ -78,6 +78,9 @@ html:before {
   .rg-textRightAt4 {
     text-align: right; }
 
+  .rg-autoAt4 {
+    width: auto; }
+
   .rg-1of4 {
     width: 25%; }
 
@@ -395,6 +398,9 @@ html:before {
 
   .rg-textRightAt6 {
     text-align: right; }
+
+  .rg-autoAt6 {
+    width: auto; }
 
   .rg-1of6 {
     width: 16.66667%; }
@@ -719,6 +725,9 @@ html:before {
 
   .rg-textRightAt8 {
     text-align: right; }
+
+  .rg-autoAt8 {
+    width: auto; }
 
   .rg-1of8 {
     width: 12.5%; }
@@ -1049,6 +1058,9 @@ html:before {
 
   .rg-textRightAt10 {
     text-align: right; }
+
+  .rg-autoAt10 {
+    width: auto; }
 
   .rg-1of10 {
     width: 10%; }
@@ -1385,6 +1397,9 @@ html:before {
 
   .rg-textRightAt12 {
     text-align: right; }
+
+  .rg-autoAt12 {
+    width: auto; }
 
   .rg-1of12 {
     width: 8.33333%; }
@@ -1729,6 +1744,9 @@ html:before {
 .no-mediaqueries .rg-textRightAt4,
 .no-js .rg-textRightAt4 {
   text-align: right; }
+.no-mediaqueries .rg-autoAt4,
+.no-js .rg-autoAt4 {
+  width: auto; }
 .no-mediaqueries .rg-1of4,
 .no-js .rg-1of4 {
   width: 25%; }
@@ -2049,6 +2067,9 @@ html:before {
 .no-mediaqueries .rg-textRightAt6,
 .no-js .rg-textRightAt6 {
   text-align: right; }
+.no-mediaqueries .rg-autoAt6,
+.no-js .rg-autoAt6 {
+  width: auto; }
 .no-mediaqueries .rg-1of6,
 .no-js .rg-1of6 {
   width: 16.66667%; }
@@ -2375,6 +2396,9 @@ html:before {
 .no-mediaqueries .rg-textRightAt8,
 .no-js .rg-textRightAt8 {
   text-align: right; }
+.no-mediaqueries .rg-autoAt8,
+.no-js .rg-autoAt8 {
+  width: auto; }
 .no-mediaqueries .rg-1of8,
 .no-js .rg-1of8 {
   width: 12.5%; }
@@ -2707,6 +2731,9 @@ html:before {
 .no-mediaqueries .rg-textRightAt10,
 .no-js .rg-textRightAt10 {
   text-align: right; }
+.no-mediaqueries .rg-autoAt10,
+.no-js .rg-autoAt10 {
+  width: auto; }
 .no-mediaqueries .rg-1of10,
 .no-js .rg-1of10 {
   width: 10%; }
@@ -3045,6 +3072,9 @@ html:before {
 .no-mediaqueries .rg-textRightAt12,
 .no-js .rg-textRightAt12 {
   text-align: right; }
+.no-mediaqueries .rg-autoAt12,
+.no-js .rg-autoAt12 {
+  width: auto; }
 .no-mediaqueries .rg-1of12,
 .no-js .rg-1of12 {
   width: 8.33333%; }

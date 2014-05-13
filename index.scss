@@ -5,8 +5,8 @@ $rg-spacing: 0 5px 10px 20px 40px 60px;
 // Components
 // -----------------------------------------------------------------
 
-@import "nib-styles-fractional-widths/index";
-@import "nib-styles-spacing-classes/index";
+@import "components/nib-styles-fractional-widths/index";
+@import "components/nib-styles-spacing-classes/index";
 
 // Grid Framework
 // -----------------------------------------------------------------
@@ -37,9 +37,11 @@ $rg-spacing: 0 5px 10px 20px 40px 60px;
   .rg-textLeftAt#{$columns} {
     text-align: left;
   }
-
   .rg-textRightAt#{$columns} {
     text-align: right;
+  }
+  .rg-autoAt#{$columns} {
+    width: auto;
   }
 }
 
