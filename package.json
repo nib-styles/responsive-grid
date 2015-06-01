@@ -1,0 +1,9 @@
+{
+  "name": "@nib-styles/responsive-grid",
+  "version": "0.4.2",
+  "main.css": "index.css",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:nib-styles/responsive-grid.git"
+  }
+}
